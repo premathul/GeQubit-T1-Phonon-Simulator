@@ -27,8 +27,16 @@ pytest -q
 
 The current code should be interpreted as a transparent research foundation rather than a publication-ready (T_1) predictor. Quantitative predictions require experimentally or independently validated deformation potentials, sound velocities, mass density, orbital form factors, spin-orbit matrix elements, and the correct multiband hole-state structure. The project will progressively add those layers while retaining simple analytical limits for validation.
 
+## Runnable scientific baseline
+
+The executable baseline maps a chosen magnetic field to a Zeeman angular frequency using ħω = g_eff μ_B B. For each acoustic branch it evaluates an illustrative cubic spectral density multiplied by a Gaussian high-frequency cutoff. The LA and TA terms are displayed separately so that changes in assumed sound velocity and branch strength remain visible. The prefactors in the example are placeholders with units chosen to produce rates in inverse seconds; they are not measured germanium deformation potentials. Replacing them with microscopic coupling requires a normalized orbital form factor, crystal orientation, phonon polarization, density of states, and the actual spin-admixed matrix element.
+
+Run `python src/main.py --g 1.2 --field 0.02 0.05 0.1`. The output includes magnetic field in tesla, Zeeman frequency in gigahertz, individual rates in inverse seconds, and the reciprocal total rate in seconds. The reciprocal is meaningful only within the specific phenomenological model and assumed branch parameters. A physical comparison to experiment also needs all competing relaxation channels and the temperature-dependent absorption terms.
+
+## Validation and scope
+
+The calculations in `src/main.py` are transparent baseline models intended for reproducibility and extension. Inputs and assumptions should be reported alongside outputs; numerical agreement with a plotted trace alone does not validate a material-specific prediction. New physical terms should be accompanied by dimensional checks and independent limiting-case comparisons.
+
 ## Contact
 
-**Athul Prem**
-
-For scientific discussion, collaboration, or suggestions related to this project, please contact Athul Prem through the GitHub account associated with this repository.
+**Athul Prem** — [GitHub profile](https://github.com/premathul). For scientific discussion or collaboration, open an issue in this repository or reach out through my GitHub profile.
