@@ -6,7 +6,7 @@ HBAR = 1.054571817e-34
 MU_B = 9.2740100783e-24
 
 def rate(field_t, g_eff, branches):
-    """Return rates in s^-1 for (velocity m/s, prefactor s^2, cutoff rad/s).
+    """Return rates in s^-1 for (velocity m/s, prefactor m^3/s, cutoff rad/s).
     Model: Gamma_j = A_j omega^3 exp[-(omega/omega_c,j)^2]/v_j^3.
     A_j absorbs coupling and normalization; it MUST be calibrated separately.
     """
